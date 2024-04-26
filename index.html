@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO~DO~LIST</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background: #00467F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        
+.img-icon img {
+    display: inline-block;
+    position: absolute;
+    margin-top: 23vh;
+    height: 60vh;
+    width: 49vh;
+    margin-left: 1vh;
+}
+        h1.txt-1
+        {
+            display: inline-block;
+    position: absolute;
+    font-size: 21px;
+    font-family: cursive;
+    color: white;
+    margin-left: 73vh;
+    margin-top: 11vh;
+    font-weight: lighter;
+        }
+        h3.txt-2
+        {
+            display: inline-block;
+    position: absolute;
+    margin-top: 19vh;
+    margin-left: 54vh;
+    color: papayawhip;
+    font-family: monospace;
+        }
+        .todo-app
+        {
+            width: 100%;
+    max-width: 766px;
+    background: #fff;
+    margin: 126px auto 56px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    margin-top: 26vh;
+    display: inline-block;
+    position: absolute;
+    margin-left: 53vh;
+
+        }
+        .todo-app h2 
+            {
+                color: #002765;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+            }
+            .todo-app  img
+            {
+                width: 30px;
+    margin-left: 137px;
+    margin-top: -8vh;
+    display: inline-block;
+    position: absolute;
+            }
+            .row
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: #edeef0;
+                border-radius: 30px;
+                padding-left: 20px;
+                margin-bottom: 25px;
+            }
+            input
+            {
+                flex: 1;
+                border: none;
+                outline: none;
+                background: transparent;
+                padding: 10px;
+            }
+            button
+            {
+                border:none;
+                outline: none;
+                padding: 16px 50px;
+                background: #ff5945;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 40px;
+            }
+            ul li{
+                list-style: none;
+                font-size: 17px;
+                padding: 12px 8px 12px 50px;
+                user-select: none;
+                cursor: pointer;
+                position: relative;
+            }
+            ul li::before
+            {
+                content: '';
+                position: absolute;
+                height: 28px;
+                width: 28px;
+                border-radius: 50%;
+                background-image: url(unce.png);
+                background-size: cover;
+                background-position: center;
+                top: 8px;
+                left: 2px; 
+            }
+            ul li.chechked
+            {
+                color: #555;
+                text-decoration: line-through;
+            }
+            ul li.chechked::before
+            {
+                background-image: url(chechked.jpg);
+            }
+            ul li span{
+                position: absolute;
+                right: 0;
+                top: 5px;
+                width: 40px; height:40px;
+                font-size: 22px; font-weight:200;
+                color: #555;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+            }
+            ul li span:hover
+            {
+                background: #edeef0;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img-icon">
+            <img src="icon-removebg-preview (1).png">
+        </div>
+        <div class="text-heading">
+            <h1 class="txt-1">TaskTrack: Your Ultimate Productivity Companion</h1>
+        </div>
+        <div class="text-description">
+            <h3 class="txt-2">Stay organized and on top of your tasks with TaskTrack! Effortlessly manage your to-dos,<br/> set reminders, and achieve your goals with ease. Experience productivity like never before!</h3>
+        </div>
+        <div class="todo-app">
+            <h2>TO-DO List </h2>
+            <img src="icon.gif">
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add Your text">
+                <button>Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="chechked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+
+    </div>
+    <script src="script.js">
+        
+    </script>
+    
+</body>
+
+</html>
